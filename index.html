@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="株式会社TK建装のcodexテストページです。">
+  <meta name="theme-color" content="#141713">
+  <title>株式会社TK建装 | codexテストページ</title>
+  <style>
+    :root { color-scheme: dark; --gold: #dfc18c; --ivory: #f7f3e9; --muted: #c0c1b7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #141713; color: var(--ivory); font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif; }
+    .page { min-height: 100svh; display: flex; flex-direction: column; overflow: hidden; position: relative; background: radial-gradient(ellipse at 85% 40%, #3d403029, transparent 65%); }
+    .page::before { content: ""; position: absolute; inset: 16px; border: 1px solid #dfc18c30; pointer-events: none; z-index: 2; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 42px 7%; position: relative; z-index: 1; }
+    .brand { display: flex; align-items: center; gap: 16px; }
+    .monogram { width: 52px; height: 52px; border: 1px solid var(--gold); display: grid; place-items: center; color: var(--gold); font: 25px Georgia, serif; letter-spacing: -2px; }
+    .brand-name { font-size: 15px; letter-spacing: .15em; font-weight: 600; }
+    .brand-name small { display: block; color: var(--gold); font-size: 9px; letter-spacing: .28em; margin-top: 6px; }
+    .edition { color: var(--muted); font-size: 10px; letter-spacing: .22em; }
+    main { flex: 1; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; padding: 64px 7% 96px; gap: 40px; }
+    .content { position: relative; z-index: 1; }
+    .eyebrow { color: var(--gold); letter-spacing: .26em; font-size: 11px; display: flex; gap: 18px; align-items: center; margin: 0 0 36px; }
+    .eyebrow::before { content: ""; height: 1px; width: 40px; background: var(--gold); }
+    h1 { font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-weight: 500; font-size: clamp(36px, 4.8vw, 72px); line-height: 1.55; letter-spacing: .04em; margin: 0; }
+    h1 span { display: block; }
+    h1 .subtitle { color: var(--gold); font-size: clamp(28px, 3.6vw, 54px); }
+    .description { margin: 32px 0 0; font-size: 14px; line-height: 2.2; letter-spacing: .08em; color: var(--muted); }
+    .label { display: inline-flex; align-items: center; gap: 12px; border: 1px solid #dfc18c50; padding: 13px 20px; margin-top: 40px; font-size: 11px; letter-spacing: .18em; color: var(--gold); }
+    .label::before { content: ""; height: 5px; width: 5px; border-radius: 50%; background: var(--gold); }
+    .art { height: 490px; position: relative; display: grid; place-items: center; }
+    .art::before { content: ""; width: 370px; height: 370px; max-width: 100%; position: absolute; border: 1px solid #dfc18c20; border-radius: 50%; }
+    .architecture { width: 80%; height: 84%; position: relative; border-top: 1px solid #dfc18c80; border-left: 1px solid #dfc18c70; background: linear-gradient(125deg, #dfc18c12, #dfc18c03 42%, transparent 42%); transform: skewY(-9deg); box-shadow: -24px 22px 70px #00000030; }
+    .architecture::before { content: ""; position: absolute; left: 18%; top: 17%; width: 82%; height: 83%; border-top: 1px solid #dfc18c90; border-left: 1px solid #dfc18c90; background: linear-gradient(90deg, #dfc18c15, transparent 50%); }
+    .architecture::after { content: ""; position: absolute; left: 38%; top: 35%; width: 62%; height: 65%; border-top: 1px solid var(--gold); border-left: 1px solid var(--gold); background: linear-gradient(90deg, #dfc18c20, #1a1d1700); }
+    .art-caption { position: absolute; bottom: 0; right: 0; color: var(--gold); font: italic 17px Georgia, serif; letter-spacing: .08em; }
+    footer { margin: 0 7%; padding: 25px 0 36px; border-top: 1px solid #dfc18c30; display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 10px; letter-spacing: .14em; position: relative; z-index: 1; }
+    @media (min-width: 1600px) { main { max-width: 1600px; width: 100%; margin: auto; } }
+    @media (max-width: 760px) {
+      header { padding: 34px 8%; } .edition { display: none; }
+      main { grid-template-columns: 1fr; padding: 45px 8% 50px; gap: 35px; }
+      .eyebrow { font-size: 9px; margin-bottom: 25px; }
+      .description { font-size: 12px; } .art { height: 240px; width: 80%; margin-left: auto; }
+      .art::before { width: 200px; height: 200px; } .art-caption { font-size: 13px; }
+      footer { margin: 0 8%; flex-direction: column; font-size: 9px; line-height: 1.7; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="monogram" aria-hidden="true">TK</div>
+        <div class="brand-name">株式会社TK建装<small>TK KENSOU</small></div>
+      </div>
+      <div class="edition">CODEX TEST SITE / 01</div>
+    </header>
+    <main>
+      <section class="content" aria-labelledby="page-title">
+        <p class="eyebrow">WELCOME TO TK KENSOU</p>
+        <h1 id="page-title"><span>株式会社TK建装</span><span class="subtitle">codexテストページ</span></h1>
+        <p class="description">上質な空間を、確かなかたちに。<br>株式会社TK建装のテスト用ホームページへようこそ。</p>
+        <div class="label">TEST WEBSITE</div>
+      </section>
+      <div class="art" aria-hidden="true">
+        <div class="architecture"></div>
+        <span class="art-caption">Quality in every detail.</span>
+      </div>
+    </main>
+    <footer>
+      <span>TK KENSOU — 株式会社TK建装</span>
+      <span>本ページは動作確認用のテストページです。</span>
+    </footer>
+  </div>
+</body>
+</html>
